@@ -1,0 +1,222 @@
+/* -----------------------------------------------------
+ * Import Catppuccin Colors
+ * ----------------------------------------------------- */
+@import '../../../current-catppuccin.css';
+
+* {
+  border: none;
+  padding: 0px;
+  min-height: 0;
+  font-family: "JetBrains Mono Nerd Font";
+  transition: background-color .3s ease-out;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+window#waybar {
+  background-color: transparent;
+}
+
+#waybar > box {
+  border-radius: 0px;
+  border-bottom: 1.5px solid @ctp-bar-border;
+  margin: 0px;
+  background-color: @ctp-bar-bg;
+  color: @ctp-bar-fg;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  min-height: 30px;
+  transition-property: background-color;
+  transition-duration: .5s;
+}
+
+.modules-left {
+  margin-left: 4px;
+}
+
+.modules-right {
+  margin-right: 4px;
+}
+
+#workspaces {
+  margin: 0px 0px;
+  transition: 0.1s ease-in-out;
+  padding: 0px 0px;
+}
+
+#workspaces button {
+  all: initial;
+  padding: 0px 4px;
+  margin: 0px 2px;
+  color: @ctp-bar-fg;
+  border: none;
+  opacity: 1;
+  font-weight: 900;
+  transition: all 150ms ease;
+}
+
+#workspaces button.active {
+  color: @ctp-base;
+  background-color: @ctp-text;
+  padding: 1px 4px;
+  opacity: 1.0;
+}
+
+#workspaces button.empty:hover,
+#workspaces button:hover {
+  background: transparent;
+  color: @ctp-bar-fg;
+  transition: all 150ms ease;
+  opacity: 0.75;
+}
+
+#workspaces button.empty {
+  opacity: 0.6;
+  color: @ctp-bar-fg;
+}
+
+#workspaces button.empty.active {
+  opacity: 1;
+  background-color: @ctp-text;
+  color: @ctp-base;
+}
+
+#memory,
+#mpris,
+#tray,
+#cpu,
+#clock,
+#network,
+#bluetooth,
+#pulseaudio,
+#idle_inhibitor,
+#custom-sidebar-btn,
+#custom-notif-toggle,
+#custom-updates,
+#custom-update-btn,
+#custom-theme-btn {
+  min-width: 12px;
+  padding: 0 4px;
+  margin: 1px 3px;
+  opacity: 1;
+  color: @ctp-bar-fg;
+}
+
+#custom-theme-btn {
+  opacity: 1;
+  color: @ctp-accent;
+}
+
+#custom-update-btn {
+  opacity: 1;
+}
+
+#custom-updates {
+  opacity: 1;
+}
+
+#bluetooth {
+  padding-left: 0px;
+}
+
+#tray {
+  opacity: 1;
+}
+
+#idle_inhibitor {
+  opacity: 0.6;
+}
+
+#idle_inhibitor.activated {
+  opacity: 1;
+}
+
+#custom-expand-icon {
+  margin-right: 0px;
+  opacity: 0.25;
+  font-size: 10px;
+}
+
+#network {
+  margin-left: 0;
+}
+
+#custom-separator {
+  opacity: 0.4;
+  padding-top: 2px;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+tooltip {
+  padding: 4px;
+  background: @ctp-tooltip-bg;
+  font-size: 10px;
+  border: 1.5px solid @ctp-bar-border;
+  border-radius: 8px;
+  color: @ctp-tooltip-fg;
+  font-weight: normal;
+}
+
+#power-profiles-daemon {
+  margin: 0 4px;
+}
+
+#custom-idle-indicator,
+#custom-sidebar-btn {
+  min-width: 12px;
+  margin-left: 0;
+  margin-right: 0;
+  font-size: 12px;
+  padding-bottom: 0px;
+}
+
+#custom-idle-indicator.active {
+  color: @ctp-red;
+  opacity: 1;
+}
+
+#custom-sidebar-btn {
+  opacity: 1;
+  color: @ctp-accent;
+  font-size: 14px;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+#clock:hover,
+#tray:hover,
+#cpu:hover,
+#memory:hover,
+#mpris:hover,
+#bluetooth:hover,
+#custom-update-btn:hover,
+#idle_inhibitor:hover,
+#custom-updates:hover,
+#network:hover,
+#pulseaudio:hover,
+#custom-theme-btn:hover,
+#custom-sidebar-btn:hover {
+  border-radius: 0px;
+  opacity: 1;
+  background-color: transparent;
+  color: @ctp-bar-fg;
+}
+
+#mpris {
+  opacity: 1;
+  color: @ctp-bar-fg;
+  animation: repeat;
+  animation-name: mpris-blink;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes mpris-blink {
+  to {
+    opacity: 0.3;
+  }
+}

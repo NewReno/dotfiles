@@ -1,0 +1,39 @@
+* {
+  background: #222426;
+  foreground: #EAE4E2;
+  background-color: #222426;
+  text-color: #EAE4E2;
+
+  normal-0: #48494C;
+  normal-1: #141B25;
+  normal-2: #353E49;
+  normal-3: #415E79;
+  normal-4: #815E52;
+  normal-5: #767884;
+  normal-6: #ADA4A0;
+  normal-7: #EAE4E2;
+
+  bright-0: #A4A09E;
+  bright-1: #1B2431;
+  bright-2: #475261;
+  bright-3: #577EA1;
+  bright-4: #AC7D6E;
+  bright-5: #9DA0B0;
+  bright-6: #E6DAD6;
+  bright-7: #EAE4E2;
+
+  primary: #AC7D6E;
+  on-primary: #222426;
+  accent: #AC7D6E;
+  black: #48494C;
+  white: #EAE4E2;
+  red: #141B25;
+  green: #353E49;
+  yellow: #415E79;
+  blue: #815E52;
+  magenta: #767884;
+  cyan: #ADA4A0;
+  gray: #A4A09E;
+  surface: #48494C;
+  on-surface: #EAE4E2;
+}

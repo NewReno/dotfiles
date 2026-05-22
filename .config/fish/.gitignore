@@ -1,0 +1,8 @@
+# Ignore local config (machine-specific)
+config.local.fish
+
+# Ignore fish variable dumps
+fish_variables
+
+# Ignore generated completions
+completions/*.fish

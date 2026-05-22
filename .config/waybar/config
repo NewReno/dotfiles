@@ -1,0 +1,213 @@
+{
+  "exclusive": true,
+  "reload_style_on_change": true,
+  "position": "top",
+  "margin-top": 0,
+  "spacing": 0,
+  "height": 36,
+  "margin-bottom": 0,
+  "modules-left": [
+    "hyprland/workspaces",
+    "custom/separator",
+    "idle_inhibitor",
+    "custom/idle-indicator",
+    "custom/notif-toggle",
+    "custom/updates",
+    "custom/update-btn"
+  ],
+  "modules-center": ["mpris"],
+  "modules-right": [
+    "group/tray-expander",
+    "custom/separator",
+    "pulseaudio",
+    "memory",
+    "cpu",
+    "custom/separator",
+    "clock"
+  ],
+
+  "hyprland/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": true,
+    "cursor": true,
+    "format": "{icon}",
+    "persistent-workspaces": {
+      "1": [],
+      "2": [],
+      "3": [],
+      "4": [],
+      "5": [],
+      "6": [],
+      "7": [],
+      "8": [],
+      "9": [],
+      "10": []
+    }
+  },
+
+  "custom/separator": {
+    "format": "|",
+    "tooltip": false
+  },
+
+  "custom/idle-indicator": {
+    "on-click": "pkill -x hypridle || true && nohup hypridle &",
+    "exec": "~/.config/waybar/scripts/idle-indicator.sh",
+    "signal": 9,
+    "return-type": "json",
+    "interval": 5
+  },
+
+  "custom/notif-toggle": {
+    "on-click": "swaync-client -t -sw",
+    "exec": "~/.config/waybar/scripts/notification-toggle.sh",
+    "signal": 10,
+    "return-type": "json",
+    "interval": 5
+  },
+
+  "custom/updates": {
+    "format": "{}{icon}",
+    "return-type": "json",
+    "format-icons": {
+      "has-updates": " 󰏖",
+      "updated": ""
+    },
+    "exec-if": "which checkupdates",
+    "exec": "~/.config/waybar/scripts/updates.sh",
+    "interval": 3600
+  },
+
+  "custom/update-btn": {
+    "format": "",
+    "on-click": "alacritty --class dotfiles-floating -e ~/.config/ml4w/scripts/ml4w-install-system-updates",
+    "tooltip-format": "Install updates",
+    "signal": 7,
+    "interval": 21600
+  },
+
+  "idle_inhibitor": {
+    "format": "{icon}",
+    "format-icons": {
+      "activated": "󰍛",
+      "deactivated": "󰾫"
+    },
+    "on-click": "pkill -x hypridle || true && nohup hypridle &"
+  },
+
+  "group/tray-expander": {
+    "orientation": "inherit",
+    "drawer": {
+      "transition-duration": 600,
+      "children-class": "tray-group-item",
+      "transition-left-to-right": false
+    },
+    "modules": [
+      "custom/expand-icon",
+      "tray",
+      "power-profiles-daemon",
+      "network",
+      "bluetooth"
+    ]
+  },
+
+  "custom/expand-icon": {
+    "format": " ",
+    "tooltip": false
+  },
+
+  "power-profiles-daemon": {
+    "format": "{icon}",
+    "tooltip-format": "Power: {profile} ({driver})",
+    "tooltip": true,
+    "format-icons": {
+      "performance": "󰓅",
+      "balanced": "",
+      "power-saver": ""
+    }
+  },
+
+  "tray": {
+    "icon-size": 14,
+    "spacing": 4
+  },
+
+  "network": {
+    "format-icons": [
+      "󰤯",
+      "󰤟",
+      "󰤢",
+      "󰤥",
+      "󰤨"
+    ],
+    "format": "{icon}",
+    "format-wifi": "{icon}",
+    "format-ethernet": "󰌗",
+    "format-disconnected": "󰤮",
+    "tooltip-format-wifi": "{essid} ({frequency} GHz)\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
+    "tooltip-format-ethernet": "⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
+    "tooltip-format-disconnected": "Disconnected",
+    "interval": 3
+  },
+
+  "bluetooth": {
+    "format": "󰂯",
+    "format-disabled": "󰂲",
+    "format-connected": "󰂱",
+    "tooltip-format": "Devices: {num_connections}",
+    "on-click": "blueman-manager"
+  },
+
+  "pulseaudio": {
+    "format": "vol {volume}%",
+    "on-click": "pavucontrol",
+    "on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+    "tooltip-format": "{volume}%",
+    "scroll-step": 5,
+    "format-muted": "󰸈",
+    "format-icons": {
+      "headphone": "",
+      "default": ["", "", ""]
+    }
+  },
+
+  "memory": {
+    "interval": 5,
+    "format": "mem {used:0.1f}gb",
+    "on-click": "~/.config/ml4w/settings/system-monitor.sh"
+  },
+
+  "cpu": {
+    "interval": 5,
+    "format": "cpu {usage}%",
+    "on-click": "~/.config/ml4w/settings/system-monitor.sh"
+  },
+
+  "mpris": {
+    "format": "󰝚 {artist} - {title}",
+    "format-paused": "<span color='grey'>{status_icon}</span>",
+    "max-length": 75,
+    "player-icons": {
+      "default": "⏸",
+      "mpv": "🎵"
+    },
+    "status-icons": {
+      "paused": "󰝛"
+    },
+    "ignored-players": ["firefox", "chromium", "brave"]
+  },
+
+  "clock": {
+    "format": "{:%d/%m - %H:%M}",
+    "tooltip-format": "<span>{calendar}</span>",
+    "calendar": {
+      "mode": "month",
+      "mode-mon-col": 3,
+      "format": {
+        "month": "<span color='#ffead3'><b>{}</b></span>",
+        "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+        "today": "<span color='#ff6699'><b>{}</b></span>"
+      }
+    }
+  }
+}

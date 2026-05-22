@@ -1,0 +1,30 @@
+@define-color background #222426;
+@define-color on_background #EAE4E2;
+@define-color surface #48494C;
+@define-color on_surface #EAE4E2;
+@define-color primary #AC7D6E;
+@define-color on_primary #222426;
+@define-color error #141B25;
+@define-color on_error #222426;
+
+* {
+  --bg-panel: alpha(#222426, 0.85);
+  --bg-widget: alpha(#48494C, 0.75);
+  --bg-tile: alpha(#48494C, 0.82);
+  --accent: #AC7D6E;
+  --accent-dim: alpha(#AC7D6E, 0.18);
+  --text-primary: #EAE4E2;
+  --text-dim: alpha(#EAE4E2, 0.55);
+  --text-accent: #AC7D6E;
+  --border-glass: alpha(#EAE4E2, 0.16);
+  --border-active: alpha(#AC7D6E, 0.28);
+  --gradient-bg: alpha(#AC7D6E, 0.08);
+  --notification-img-filter: none;
+  --dnd-active: #141B25;
+  --dnd-inactive: alpha(#EAE4E2, 0.3);
+  --slider-track: alpha(#EAE4E2, 0.12);
+  --slider-progress: #AC7D6E;
+  --button-bg: alpha(#EAE4E2, 0.06);
+  --button-hover: alpha(#EAE4E2, 0.12);
+  --button-active: alpha(#AC7D6E, 0.1);
+}

@@ -1,0 +1,35 @@
+[colors]
+primary = {
+  background = "#222426"
+  foreground = "#F6F2F1"
+
+  normal = {
+    black =   "#48494C"
+    red =     "#141B25"
+    green =   "#353E49"
+    yellow =  "#415E79"
+    blue =    "#815E52"
+    magenta = "#767884"
+    cyan =    "#ADA4A0"
+    white =   "#EAE4E2"
+  }
+
+  bright = {
+    black =   "#A4A09E"
+    red =     "#1B2431"
+    green =   "#475261"
+    yellow =  "#577EA1"
+    blue =    "#AC7D6E"
+    magenta = "#9DA0B0"
+    cyan =    "#E6DAD6"
+    white =   "#EAE4E2"
+  }
+}
+
+[cursor]
+text = "#48494C"
+cursor = "#F6F2F1"
+
+[selection]
+text = "#48494C"
+background = "#AC7D6E"
