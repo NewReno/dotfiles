@@ -21,3 +21,4 @@ go/
 .rustup/
 .DS_Store
 .AppImage
+.gitconfig
