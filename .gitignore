@@ -1,23 +1,6 @@
-*~
-.AppImage
-.cache/
-.cargo/
-.codeium/
-.config/Code\ -\ OSS/
-.config/dconf/
-.config/fish/fish_variables
-.DS_Store
-.gnupg/
-go/
-.local/bin/*.AppImage
-.local/bin/ocx
-.local/bin/uv
 .local/share/opencode/
 *.log
 __MACOSX/
 .mozilla/
 node_modules/
 .rustup/
-.ssh/
-*.swo
-*.swp
