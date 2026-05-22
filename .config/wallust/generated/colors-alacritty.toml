@@ -1,35 +1,35 @@
 [colors]
 primary = {
-  background = "#222426"
-  foreground = "#F6F2F1"
+  background = "#222124"
+  foreground = "#FBF7EA"
 
   normal = {
-    black =   "#48494C"
-    red =     "#141B25"
-    green =   "#353E49"
-    yellow =  "#415E79"
-    blue =    "#815E52"
-    magenta = "#767884"
-    cyan =    "#ADA4A0"
-    white =   "#EAE4E2"
+    black =   "#48474B"
+    red =     "#191823"
+    green =   "#2B2C3B"
+    yellow =  "#534643"
+    blue =    "#4C536B"
+    magenta = "#9F7563"
+    cyan =    "#B7AD93"
+    white =   "#F1EBD9"
   }
 
   bright = {
-    black =   "#A4A09E"
-    red =     "#1B2431"
-    green =   "#475261"
-    yellow =  "#577EA1"
-    blue =    "#AC7D6E"
-    magenta = "#9DA0B0"
-    cyan =    "#E6DAD6"
-    white =   "#EAE4E2"
+    black =   "#A9A498"
+    red =     "#21202F"
+    green =   "#3A3A4E"
+    yellow =  "#6E5E59"
+    blue =    "#666F8F"
+    magenta = "#D49C84"
+    cyan =    "#F4E7C4"
+    white =   "#F1EBD9"
   }
 }
 
 [cursor]
-text = "#48494C"
-cursor = "#F6F2F1"
+text = "#48474B"
+cursor = "#FBF7EA"
 
 [selection]
-text = "#48494C"
-background = "#AC7D6E"
+text = "#48474B"
+background = "#666F8F"
